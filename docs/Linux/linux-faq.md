@@ -9,6 +9,7 @@ keywords:
   - OS
   - Operating
   - Operating System
+  - FAQ
 # image: <insert image here>
 ---
 
