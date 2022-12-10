@@ -12,4 +12,6 @@ sidebar_position: 1
 | Linux        | https://rasmusj.dk/docs/Linux/Linux-FAQ |
 | Windows      | https://rasmusj.dk/docs/Windows/Windows-FAQ  |
 
+```html
 <script src="https://tryhackme.com/badge/35604"></script>
+```
