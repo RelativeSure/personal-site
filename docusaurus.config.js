@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Rasmus' Documentation",
-  tagline: 'Linux, Windows and etc documentation',
+  tagline: 'Linux, Windows, etc. documentation',
   url: 'https://rasmusj.dk',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -65,7 +65,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'Tutorial/intro',
             position: 'left',
             label: 'Tutorial',
           },
@@ -85,7 +85,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/Tutorial/intro',
               },
             ],
           },
