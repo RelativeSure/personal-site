@@ -27,6 +27,30 @@ const config = {
     locales: ['en'],
   },
 
+  plugins : [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        indexDocs: true,
+        indexDocSidebarParentCategories: 2,
+        indexBlog: false,
+        indexPages: false,
+        language: "en",
+        style: undefined,
+        maxSearchResults: 8,
+        lunr: {
+          tokenizerSeparator: /[\s\-]+/,
+          b: 0.75,
+          k1: 1.2,
+          titleBoost: 5,
+          contentBoost: 1,
+          tagsBoost: 3,
+          parentCategoriesBoost: 2,
+        }
+      }
+    ]
+  ],
+
   presets: [
     [
       'classic',
