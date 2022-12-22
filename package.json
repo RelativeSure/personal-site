@@ -18,7 +18,7 @@
     "@docusaurus/core": "2.2.0",
     "@docusaurus/preset-classic": "2.2.0",
     "@docusaurus/remark-plugin-npm2yarn": "^2.2.0",
-    "@mdx-js/react": "^2.1.5",
+    "@mdx-js/react": "^2.2.1",
     "clsx": "^1.2.1",
     "docusaurus": "^1.14.7",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -43,6 +43,6 @@
     ]
   },
   "engines": {
-    "node": ">=19.3"
+    "node": ">=16.14"
   }
 }
