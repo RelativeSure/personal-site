@@ -27,5 +27,6 @@ To see what files are in your current directory: `ls`
 Print out the content of a file into terminal: `cat`
 
 Open the file in a window and open it at the bottom: `less`.
+
 Open the file in a window and open it at the top: `head`.
 [EOF]
