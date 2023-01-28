@@ -27,9 +27,8 @@ const config = {
     locales: ['en'],
   },
 
-  plugins : [
-    [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
+  plugins: [
+    [require.resolve("@cmfcmf/docusaurus-search-local"),
       {
         indexDocs: true,
         indexDocSidebarParentCategories: 2,
@@ -47,8 +46,9 @@ const config = {
           tagsBoost: 3,
           parentCategoriesBoost: 2,
         }
-      }
-    ]
+      },
+    ],
+    'docusaurus-plugin-matomo',
   ],
 
   presets: [
@@ -59,9 +59,6 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl: 'https://github.com/RelativeSure/netlify-docusaurus',
         },
         blog: false,
         theme: {
@@ -81,13 +78,6 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'intro',
-          //   position: 'left',
-          //   label: 'Tutorial',
-          // },
-          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://infosec.exchange/@relativesure',
             label: 'Mastodon',
@@ -100,54 +90,15 @@ const config = {
           },
         ],
       },
-      // footer: {
-      //   style: 'dark',
-      //   links: [
-          // {
-          //   title: 'Docs',
-          //   items: [
-          //     // {
-          //     //   label: 'Tutorial',
-          //     //   to: '/docs/Tutorial/intro',
-          //     // },
-          //   ],
-          // },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Stack Overflow',
-          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          //     },
-          //     {
-          //       label: 'Discord',
-          //       href: 'https://discordapp.com/invite/docusaurus',
-          //     },
-          //     {
-          //       label: 'Twitter',
-          //       href: 'https://twitter.com/docusaurus',
-          //     },
-          //   ],
-          // },
-        //   {
-        //     title: 'More',
-        //     items: [
-        //       {
-        //         label: 'Blog',
-        //         to: '/blog',
-        //       },
-        //       {
-        //         label: 'GitHub',
-        //         href: 'https://github.com/RelativeSure/netlify-docusaurus',
-        //       },
-        //     ],
-        //   },
-        // ],
-        // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      matomo: {
+        matomoUrl: 'https://matomo.rasmusj.dk/',
+        siteId: '1',
+        phpLoader: 'matomo.php',
+        jsLoader: 'matomo.js',
       },
     }),
 };
