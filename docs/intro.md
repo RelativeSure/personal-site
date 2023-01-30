@@ -4,6 +4,7 @@ Title: Me
 sidebar_position: 1
 slug: /
 ---
+# THIS SITE IS VERY EARLY WIP
 
 ## About Me
 
