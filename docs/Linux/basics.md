@@ -10,7 +10,6 @@ keywords:
   - Operating
   - Operating System
   - basic
-# image: <insert image here>
 ---
 All the commands listed here can be used in each linux distro.
 
