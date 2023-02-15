@@ -8,7 +8,7 @@ slug: /
 
 ## About Me
 
-My name is Rasmus and I am currently 24 years old. I have experience in working as a DevOps and I have a high interest in IT-Security. I am currently top 2% on TryHackMe.
+My name is Rasmus and I am currently 24 years old. **WIP**
 
 I have experience in working with:
 - Linux
