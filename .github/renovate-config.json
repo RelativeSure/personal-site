@@ -1,6 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [ "config:best-practices" ],
+  "extends": [
+    "config:best-practices",
+    "config:recommended"
+  ],
   "baseBranches": [ "main"],
   "dependencyDashboardTitle": "Dependency Dashboard self-hosted",
   "onboarding": true,
@@ -9,8 +12,5 @@
   "repositories": [],
   "git-submodules": {
       "enabled": true
-  },
-  "kubernetes": {
-    "fileMatch": ["\\.yaml$","\\.yml$"]
   }
 }
