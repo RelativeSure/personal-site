@@ -14,7 +14,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://rasmusj.dk',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -37,26 +37,6 @@ const config = {
   },
 
   presets: [
-    [require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        indexDocs: true,
-        indexDocSidebarParentCategories: 2,
-        indexBlog: false,
-        indexPages: false,
-        language: "en",
-        style: undefined,
-        maxSearchResults: 8,
-        lunr: {
-          tokenizerSeparator: /[\s\-]+/,
-          b: 0.75,
-          k1: 1.2,
-          titleBoost: 5,
-          contentBoost: 1,
-          tagsBoost: 3,
-          parentCategoriesBoost: 2,
-        }
-      },
-    ],
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
@@ -80,7 +60,6 @@ const config = {
         },
       }),
     ],
-    'docusaurus-plugin-matomo',
   ],
 
   themeConfig:
