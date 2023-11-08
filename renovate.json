@@ -1,3 +1,22 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "platformAutomerge": true,
+  "prCreation": "immediate",
+  "assignees": ["RelativeSure"],
+  "extends": [
+    "github>renovatebot/.github",
+    "config:best-practices",
+    "config:recommended"
+  ],
+  "git-submodules": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "description": "Trigger PR for all updates",
+      "matchUpdateTypes": ["patch","minor", "digest", "major"],
+      "semanticCommitType": "feat",
+      "automergeType": "pr"
+    }
+  ]
 }
