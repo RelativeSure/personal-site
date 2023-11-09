@@ -52,7 +52,6 @@ const config = {
         }
       },
     ],
-    'docusaurus-plugin-matomo',
   ],
 
   presets: [
@@ -98,13 +97,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: ['bash', 'diff', 'json'],
-      },
-      matomo: {
-        matomoUrl: 'https://matomo.rasmusj.dk/',
-        siteId: '1',
-        phpLoader: 'matomo.php',
-        jsLoader: 'matomo.js',
-      },
+      }
     }),
 };
 

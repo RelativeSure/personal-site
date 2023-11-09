@@ -8,7 +8,8 @@ slug: /
 
 ## About Me
 
-My name is Rasmus and I am currently 24 years old. **WIP**
+My name is Rasmus and I am currently 25 years old.
+I have interests in Open-Source projects.
 
 I have experience in working with:
 - Linux
@@ -21,8 +22,11 @@ I have experience in working with:
   - Redis
   - PostgreSQL
   - MySQL / MariaDB
+- Containers
+  - Docker
+  - Kubernetes
 
-I have an education in Datatechnician with special in infrastructure. I have gotten a medal and diploma from my city's mayor because of being a great ambassador.
+I have an education in Datatechnician with special in infrastructure. I have gotten a medal and diploma from my city's mayor because of being a great ambassador for the education.
 
 ### Technical side of my site
 
