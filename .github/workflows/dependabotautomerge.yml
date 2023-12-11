@@ -10,7 +10,7 @@ jobs:
     if: github.actor == 'dependabot[bot]'
     steps:
       - name: automerge
-        uses: actions/github-script@e5da67d39584bc686fb8876607bb0834fc3405b0 # 0.2.0
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # 7.0.1
         with:
           script: |
             github.pullRequests.createReview({
