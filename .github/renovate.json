@@ -1,0 +1,58 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "configMigration": true,
+  "extends": [
+    "config:best-practices",
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreModulesAndTests",
+    "group:monorepos",
+    "group:recommended",
+    "replacements:all",
+    "workarounds:all"
+  ]
+  ],
+  "baseBranches": [
+    "main"
+  ],
+  "git-submodules": {
+    "enabled": true
+  },
+  "automerge": true,
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "extends": [
+      "schedule:weekly"
+    ]
+  },
+  "npm": {
+    "enabled": true,
+    "minimumReleaseAge": "3 days"
+  },
+  "prCreation": "immediate",
+  "rebaseWhen": "behind-base-branch",
+  "branchPrefix": "renovate/",
+  "respectLatest": true,
+  "packageRules": [
+    {
+      "matchSourceUrlPrefixes": [
+        "https://github.com/"
+      ],
+      "prBodyDefinitions": {
+        "OpenSSF": "[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/{{sourceRepo}}/badge)](https://securityscorecards.dev/viewer/?uri=github.com/{{sourceRepo}})"
+      },
+      "prBodyColumns": [
+        "Package",
+        "Type",
+        "Update",
+        "Change",
+        "Pending",
+        "OpenSSF"
+      ]
+    }
+  ]
+}
