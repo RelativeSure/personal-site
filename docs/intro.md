@@ -1,5 +1,5 @@
 ---
-id: intro
+id: Introduction
 Title: Me
 sidebar_position: 1
 slug: /
