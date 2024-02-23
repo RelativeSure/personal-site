@@ -3,4 +3,4 @@
 
 # netlify-docusaurus
 
-## TODO
+Personal project and cv website
