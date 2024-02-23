@@ -87,7 +87,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/RelativeSure/netlify-docusaurus',
+            href: 'https://github.com/RelativeSure',
             label: 'GitHub',
             position: 'right',
           },
@@ -96,7 +96,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['bash', 'diff', 'json'],
+        additionalLanguages: ['bash', 'diff', 'json', 'markdown'],
       }
     }),
 };
