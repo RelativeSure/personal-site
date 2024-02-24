@@ -11,18 +11,13 @@ injectSpeedInsights();
 // /** @type {import('@docusaurus/types').Config} */
 // const config = {
 export default {
-  title: "Rasmus' Documentation",
-  tagline: 'Linux, Windows, etc. documentation',
+  title: "Rasmus Personal Site",
+  tagline: 'Intro, personal and more',
   url: 'https://rasmusj.dk',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'RelativeSure', // Usually your GitHub org/user name.
-  projectName: 'netlify-docusaurus', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -63,6 +58,8 @@ export default {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          sidebarCollapsible: true,
+          sidebarCollapsed: false,
         },
         blog: false,
         theme: {
@@ -76,7 +73,7 @@ export default {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Documentation',
+        title: 'Introduction',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -85,7 +82,7 @@ export default {
           {
             href: 'https://infosec.exchange/@relativesure',
             label: 'Mastodon',
-            position: 'left',
+            position: 'right',
           },
           {
             href: 'https://github.com/RelativeSure',
