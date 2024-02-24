@@ -5,6 +5,8 @@ const themes = require('prism-react-renderer').themes;
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
+import { injectSpeedInsights } from '@vercel/speed-insights';
+injectSpeedInsights();
 
 // /** @type {import('@docusaurus/types').Config} */
 // const config = {
