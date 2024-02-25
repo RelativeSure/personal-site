@@ -1,5 +1,4 @@
 import {themes as prismThemes} from 'prism-react-renderer';
-import { injectSpeedInsights } from '@vercel/speed-insights';
 
 export default {
   title: "Rasmus Personal Site",
