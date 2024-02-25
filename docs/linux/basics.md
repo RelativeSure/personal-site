@@ -1,8 +1,6 @@
 ---
 id: linux-basic
 title: Linux Basic
-hide_title: true
-hide_table_of_contents: true
 description: Basic commands in linux
 keywords:
   - Linux
@@ -11,6 +9,7 @@ keywords:
   - Operating System
   - basic
 ---
+
 All the commands listed here can be used in each linux distro.
 
 ## Check flags of each command

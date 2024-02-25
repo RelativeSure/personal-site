@@ -1,7 +1,6 @@
 ---
 id: intro
 title: Introduction
-Title: Me
 sidebar_position: 1
 slug: /
 ---
