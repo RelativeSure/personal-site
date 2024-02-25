@@ -1,6 +1,6 @@
 ---
-id: Windows-FAQ
-title: Windows FAQ
+id: windows
+title: Windows
 hide_title: true
 hide_table_of_contents: true
 description: Frequently Asked Questions about Windows

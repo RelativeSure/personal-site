@@ -1,14 +1,10 @@
 ---
-id: Introduction
+id: intro
+title: Introduction
 Title: Me
 sidebar_position: 1
 slug: /
 ---
-
-- [Introduction](#introduction)
-  - [Links](#links)
-  - [Technical side of my site](#technical-side-of-my-site)
-  - [Projects](#projects)
 
 # Introduction
 
@@ -44,16 +40,18 @@ I have experience in working with:
   - Terraform
 
 ## Links
+
 - [LinkedIn](https://www.linkedin.com/in/rj%C3%B8rgensen/)
 
-## Technical side of my site
+## Technical
 
-- [IT-Security](./IT-Security/it-security-faq.md)
-- [Kubernetes](./Kubernetes/kubernetes-faq.md)
-- [Linux](./Linux/basics.md)
-- [Windows](./Windows/windows-faq.md)
+- [IT-Security](it-security/it-security.md)
+- [Kubernetes](kubernetes/kubernetes.md)
+- [Linux](linux/linux.md)
+- [Windows](windows/windows.md)
 
 ## Projects
+
 - [GitHub KubeArchitect Organization](https://github.com/KubeArchitect)
 - [Ansible WSL2 Setup](https://github.com/RelativeSure/ansible-wsl2-playbook)
 - [Renovate Runner](https://github.com/KubeArchitect/renovate-runner)

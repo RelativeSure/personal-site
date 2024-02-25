@@ -1,5 +1,5 @@
 ---
-id: Linux-links
+id: linux-links
 title: Linux Links
 hide_title: true
 hide_table_of_contents: true

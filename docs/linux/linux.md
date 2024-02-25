@@ -1,6 +1,6 @@
 ---
-id: Linux-FAQ
-title: Linux FAQ
+id: linux
+title: Linux
 hide_title: true
 hide_table_of_contents: true
 description: Frequently Asked Questions about Linux

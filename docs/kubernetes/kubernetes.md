@@ -1,6 +1,6 @@
 ---
-id: Kubernetes-FAQ
-title: Kubernetes FAQ
+id: kubernetes
+title: Kubernetes
 hide_title: true
 hide_table_of_contents: true
 description: Frequently Asked Questions about Kubernetes

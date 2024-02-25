@@ -1,38 +1,19 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
-const themes = require('prism-react-renderer').themes;
-const lightCodeTheme = themes.github;
-const darkCodeTheme = themes.dracula;
-
+import {themes as prismThemes} from 'prism-react-renderer';
 import { injectSpeedInsights } from '@vercel/speed-insights';
-injectSpeedInsights();
 
-// /** @type {import('@docusaurus/types').Config} */
-// const config = {
 export default {
   title: "Rasmus Personal Site",
   tagline: 'Intro, personal and more',
-  url: 'https://rasmusj.dk',
+  url: 'https://www.rasmusj.dk',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
-  colorMode: {
-    defaultMode: 'dark',
-    disableSwitch: false,
-    respectPrefersColorScheme: true,
-  },
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   plugins: [
     [require.resolve('docusaurus-lunr-search'),
     {
@@ -40,7 +21,7 @@ export default {
       indexBaseUrl: true,
       disableVersioning: true,
     }],
-    'plugin-image-zoom',
+    require.resolve("docusaurus-plugin-image-zoom"),
   ],
 
   themes: [
@@ -87,22 +68,38 @@ export default {
         ],
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-        additionalLanguages: ['bash', 'diff', 'json', 'markdown'],
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+        additionalLanguages: [
+          'bash',
+          'diff',
+          'json',
+          'markdown',
+          'powershell',
+          'yaml',
+          'git',
+          'nginx',
+          'docker',
+        ],
       },
-      // imageZoom: {
-      //   // CSS selector to apply the plugin to, defaults to '.markdown img'
-      //   selector: '.markdown img',
-      //   // Optional medium-zoom options
-      //   // see: https://www.npmjs.com/package/medium-zoom#options
-      //   options: {
-      //     margin: 24,
-      //     background: '#BADA55',
-      //     scrollOffset: 0,
-      //     container: '#zoom-container',
-      //     template: '#zoom-template',
-      //   },
-      // },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 5,
+      },
+      zoom: {
+        selector: '.markdown :not(em) > img',
+        config: {
+          // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+          background: {
+            light: 'rgb(255, 255, 255)',
+            dark: 'rgb(50, 50, 50)'
+          }
+        }
+      }
     }),
 };
