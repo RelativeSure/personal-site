@@ -1,32 +1,18 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+import {themes as prismThemes} from 'prism-react-renderer';
 
-const themes = require('prism-react-renderer').themes;
-const lightCodeTheme = themes.github;
-const darkCodeTheme = themes.dracula;
-
-import { injectSpeedInsights } from '@vercel/speed-insights';
-injectSpeedInsights();
-
-// /** @type {import('@docusaurus/types').Config} */
-// const config = {
 export default {
   title: "Rasmus Personal Site",
   tagline: 'Intro, personal and more',
-  url: 'https://rasmusj.dk',
+  url: 'https://www.rasmusj.dk',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   plugins: [
     [require.resolve("@cmfcmf/docusaurus-search-local"),
       {
@@ -48,6 +34,11 @@ export default {
         }
       },
     ],
+    require.resolve("docusaurus-plugin-image-zoom"),
+  ],
+
+  themes: [
+    '@saucelabs/theme-github-codeblock'
   ],
 
   presets: [
@@ -58,8 +49,6 @@ export default {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          sidebarCollapsible: true,
-          sidebarCollapsed: false,
         },
         blog: false,
         theme: {
@@ -92,9 +81,38 @@ export default {
         ],
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-        additionalLanguages: ['bash', 'diff', 'json', 'markdown'],
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+        additionalLanguages: [
+          'bash',
+          'diff',
+          'json',
+          'markdown',
+          'powershell',
+          'yaml',
+          'git',
+          'nginx',
+          'docker',
+        ],
+      },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 5,
+      },
+      zoom: {
+        selector: '.markdown :not(em) > img',
+        config: {
+          // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+          background: {
+            light: 'rgb(255, 255, 255)',
+            dark: 'rgb(50, 50, 50)'
+          }
+        }
       }
     }),
 };

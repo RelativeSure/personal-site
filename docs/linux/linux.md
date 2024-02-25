@@ -1,8 +1,6 @@
 ---
-id: Linux-FAQ
-title: Linux FAQ
-hide_title: true
-hide_table_of_contents: true
+id: linux
+title: Linux
 description: Frequently Asked Questions about Linux
 keywords:
   - Linux
@@ -12,6 +10,5 @@ keywords:
   - FAQ
 # image: <insert image here>
 ---
-
 
 # Linux stuff

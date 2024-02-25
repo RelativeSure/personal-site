@@ -1,8 +1,6 @@
 ---
-id: IT-Security-FAQ
-title: IT-Security FAQ
-hide_title: true
-hide_table_of_contents: true
+id: it-security
+title: IT-Security
 description: Frequently Asked Questions about IT-Security
 keywords:
   - IT-Security
@@ -13,4 +11,4 @@ keywords:
 # image: <insert image here>
 ---
 
-# IT-Security stuff
+Insert stuff here

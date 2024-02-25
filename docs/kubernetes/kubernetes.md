@@ -1,8 +1,6 @@
 ---
-id: Kubernetes-FAQ
-title: Kubernetes FAQ
-hide_title: true
-hide_table_of_contents: true
+id: kubernetes
+title: Kubernetes
 description: Frequently Asked Questions about Kubernetes
 keywords:
   - Kubernetes
@@ -11,8 +9,7 @@ keywords:
 # image: <insert image here>
 ---
 
-# Kubernetes FAQ
-
+Insert stuff here
 ## Rancher
 
 ## AKS
