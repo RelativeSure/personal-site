@@ -19,6 +19,12 @@ export default {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
+  colorMode: {
+    defaultMode: 'dark',
+    disableSwitch: false,
+    respectPrefersColorScheme: true,
+  },
+
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -28,26 +34,17 @@ export default {
   },
 
   plugins: [
-    [require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        indexDocs: true,
-        indexDocSidebarParentCategories: 2,
-        indexBlog: false,
-        indexPages: false,
-        language: "en",
-        style: undefined,
-        maxSearchResults: 8,
-        lunr: {
-          tokenizerSeparator: /[\s\-]+/,
-          b: 0.75,
-          k1: 1.2,
-          titleBoost: 5,
-          contentBoost: 1,
-          tagsBoost: 3,
-          parentCategoriesBoost: 2,
-        }
-      },
-    ],
+    [require.resolve('docusaurus-lunr-search'),
+    {
+      languages: ['en', 'da'],
+      indexBaseUrl: true,
+      disableVersioning: true,
+    }],
+    'plugin-image-zoom',
+  ],
+
+  themes: [
+    '@saucelabs/theme-github-codeblock'
   ],
 
   presets: [
@@ -58,8 +55,6 @@ export default {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          sidebarCollapsible: true,
-          sidebarCollapsed: false,
         },
         blog: false,
         theme: {
@@ -95,6 +90,19 @@ export default {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: ['bash', 'diff', 'json', 'markdown'],
-      }
+      },
+      // imageZoom: {
+      //   // CSS selector to apply the plugin to, defaults to '.markdown img'
+      //   selector: '.markdown img',
+      //   // Optional medium-zoom options
+      //   // see: https://www.npmjs.com/package/medium-zoom#options
+      //   options: {
+      //     margin: 24,
+      //     background: '#BADA55',
+      //     scrollOffset: 0,
+      //     container: '#zoom-container',
+      //     template: '#zoom-template',
+      //   },
+      // },
     }),
 };
