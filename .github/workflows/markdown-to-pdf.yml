@@ -17,7 +17,7 @@ jobs:
     name: Build PDF
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
       - uses: baileyjm02/markdown-to-pdf@1be26775add5f94fb55d4a2ce36ff7cad23b8dd0 # v1
         with:
           input_dir: docs
