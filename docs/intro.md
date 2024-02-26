@@ -8,7 +8,6 @@ slug: /
 # Introduction
 
 My name is Rasmus and I am currently 25 years old. I have a verified IQ of 120 and I have unique skills such as fast reader and learner.
-Learns best by doing what I love.
 
 I am a passionate Linux and Open-Source enthusiast. I love trying new technologies and helping people with their issues.
 I like to challenge myself in new ways to solve issues that exists or to learn new stuff. I want to expand my skills and knowledge within Linux and Open-Source.
