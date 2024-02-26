@@ -17,8 +17,8 @@ jobs:
     name: Build PDF
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: baileyjm02/markdown-to-pdf@v1
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
+      - uses: baileyjm02/markdown-to-pdf@1be26775add5f94fb55d4a2ce36ff7cad23b8dd0 # v1
         with:
           input_dir: docs
           output_dir: pdfs
@@ -27,7 +27,7 @@ jobs:
           # image_import: ./images
           # Default is true, can set to false to only get PDF files
           build_html: false
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@a8a3f3ad30e3422c9c7b888a15615d19a852ae32 # v3
         with:
           name: docs
           path: pdfs
