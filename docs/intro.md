@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /
 ---
 
-# Introduction
+## Introduction
 
 My name is Rasmus and I am currently 25 years old. I have a verified IQ of 120 and I have unique skills such as fast reader and learner.
 
@@ -17,6 +17,7 @@ I have recieved a medal and money from the Odense mayor and Business school for 
 I have one of the highest characters in my class.
 
 I have experience in working with:
+
 - Linux
   - RedHat
     - Fedora
@@ -31,24 +32,24 @@ I have experience in working with:
   - MySQL / MariaDB
 - Containers
   - Docker
-  - Rancher
-    - Kubernetes
-- IaC
-  - Ansible ( basisknowledge )
+  - Kubernetes
+    - Rancher
+- Infrastructure as Code
+  - Ansible ( basic knowledge )
   - Terraform
 
-## Links
+### Links
 
 - [LinkedIn](https://www.linkedin.com/in/rj%C3%B8rgensen/)
 
-## Technical
+### Technical
 
 - [IT-Security](it-security/it-security.md)
 - [Kubernetes](kubernetes/kubernetes.md)
 - [Linux](linux/linux.md)
 - [Windows](windows/windows.md)
 
-## Projects
+### Projects
 
 - [GitHub KubeArchitect Organization](https://github.com/KubeArchitect)
 - [Ansible WSL2 Setup](https://github.com/RelativeSure/ansible-wsl2-playbook)
