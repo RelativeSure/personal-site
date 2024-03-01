@@ -31,10 +31,10 @@ I have experience in working with:
   - MySQL / MariaDB
 - Containers
   - Docker
-  - Rancher
-    - Kubernetes
-- IaC
-  - Ansible ( basisknowledge )
+  - Kubernetes
+    - Rancher
+- Infrastructure as Code
+  - Ansible ( basic knowledge )
   - Terraform
 
 ## Links
