@@ -9,10 +9,6 @@ export default {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['da-DK', 'en'],
-  },
   plugins: [
     [require.resolve("@cmfcmf/docusaurus-search-local"),
       {
@@ -49,10 +45,20 @@ export default {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
+          editUrl: ({versionDocsDirPath, docPath}) =>
+            `https://github.com/relativesure/personal-site/edit/master/docs/${versionDocsDirPath}/${docPath}`,
         },
         blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
         },
       }),
     ],
@@ -63,25 +69,27 @@ export default {
     ({
       navbar: {
         title: 'Rasmus Brøgger Jørgensen',
+        hideOnScroll: true,
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            type: 'localeDropdown',
+            type: 'dropdown',
+            label: 'Socials',
             position: 'left',
-          },
-          {
-            href: 'https://infosec.exchange/@relativesure',
-            label: 'Mastodon',
-            position: 'right',
-          },
-          {
-            href: 'https://github.com/RelativeSure',
-            label: 'GitHub',
-            position: 'right',
-          },
+            items: [
+              {
+                href: 'https://infosec.exchange/@relativesure',
+                label: 'Mastodon',
+              },
+              {
+                href: 'https://github.com/RelativeSure',
+                label: 'GitHub',
+              },
+            ]
+          }
         ],
       },
       prism: {
@@ -107,6 +115,9 @@ export default {
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 5,
+      },
+      footer: {
+        copyright: `Copyright © ${new Date().getFullYear()} Personal site. Built with Docusaurus.`,
       },
       zoom: {
         selector: '.markdown :not(em) > img',
