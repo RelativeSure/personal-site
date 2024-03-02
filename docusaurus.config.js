@@ -10,8 +10,8 @@ export default {
   favicon: 'img/favicon.ico',
 
   i18n: {
-    defaultLocale: 'en-GB',
-    locales: ['da-DK', 'en-GB', 'en-US'],
+    defaultLocale: 'en',
+    locales: ['da-DK', 'en'],
   },
   plugins: [
     [require.resolve("@cmfcmf/docusaurus-search-local"),
@@ -62,7 +62,7 @@ export default {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Introduction',
+        title: 'Rasmus Brøgger Jørgensen',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
