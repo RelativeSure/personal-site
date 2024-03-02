@@ -47,13 +47,18 @@ export default {
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateTime: true,
           showLastUpdateAuthor: true,
-          disableVersioning: true,
           editUrl: ({versionDocsDirPath, docPath}) =>
             `https://github.com/relativesure/personal-site/edit/master/docs/${versionDocsDirPath}/${docPath}`,
         },
         blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
         },
       }),
     ],
@@ -64,21 +69,27 @@ export default {
     ({
       navbar: {
         title: 'Rasmus Brøgger Jørgensen',
+        hideOnScroll: true,
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            href: 'https://infosec.exchange/@relativesure',
-            label: 'Mastodon',
-            position: 'right',
-          },
-          {
-            href: 'https://github.com/RelativeSure',
-            label: 'GitHub',
-            position: 'right',
-          },
+            type: 'dropdown',
+            label: 'Socials',
+            position: 'left',
+            items: [
+              {
+                href: 'https://infosec.exchange/@relativesure',
+                label: 'Mastodon',
+              },
+              {
+                href: 'https://github.com/RelativeSure',
+                label: 'GitHub',
+              },
+            ]
+          }
         ],
       },
       prism: {
@@ -104,6 +115,16 @@ export default {
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 5,
+      },
+      announcementBar: {
+        id: 'work_in_progress',
+        content:
+          'I am currently working on this site and there can be issues, typos etc.',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+      },
+      footer: {
+        copyright: `Copyright © ${new Date().getFullYear()} Personal site. Built with Docusaurus.`,
       },
       zoom: {
         selector: '.markdown :not(em) > img',
