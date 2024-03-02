@@ -38,6 +38,10 @@ I have experience in working with:
   - Ansible ( basic knowledge )
   - Terraform
 
+### Badges
+
+![tryhackme stats](https://raw.githubusercontent.com/RelativeSure/RelativeSure/master/assets/thm_propic.png)
+
 ### Links
 
 - [LinkedIn](https://www.linkedin.com/in/rj%C3%B8rgensen/)
