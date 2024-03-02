@@ -1,6 +1,6 @@
 {
-  "name": "my-intro",
-  "version": "0.1.0",
+  "name": "personal-site",
+  "version": "0.1.5",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",

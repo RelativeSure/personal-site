@@ -11,7 +11,7 @@ export default {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['da-DK', 'en'],
   },
   plugins: [
     [require.resolve("@cmfcmf/docusaurus-search-local"),
@@ -62,12 +62,16 @@ export default {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Introduction',
+        title: 'Rasmus Brøgger Jørgensen',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
         items: [
+          {
+            type: 'localeDropdown',
+            position: 'left',
+          },
           {
             href: 'https://infosec.exchange/@relativesure',
             label: 'Mastodon',
