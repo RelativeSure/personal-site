@@ -116,13 +116,6 @@ export default {
         minHeadingLevel: 2,
         maxHeadingLevel: 5,
       },
-      announcementBar: {
-        id: 'work_in_progress',
-        content:
-          'I am currently working on this site and there can be issues, typos etc.',
-        backgroundColor: '#fafbfc',
-        textColor: '#091E42',
-      },
       footer: {
         copyright: `Copyright © ${new Date().getFullYear()} Personal site. Built with Docusaurus.`,
       },
