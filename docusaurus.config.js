@@ -9,10 +9,6 @@ export default {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['da-DK', 'en'],
-  },
   plugins: [
     [require.resolve("@cmfcmf/docusaurus-search-local"),
       {
@@ -49,6 +45,11 @@ export default {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
+          disableVersioning: true,
+          editUrl: ({versionDocsDirPath, docPath}) =>
+            `https://github.com/relativesure/personal-site/edit/master/docs/${versionDocsDirPath}/${docPath}`,
         },
         blog: false,
         theme: {
@@ -68,10 +69,6 @@ export default {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'localeDropdown',
-            position: 'left',
-          },
           {
             href: 'https://infosec.exchange/@relativesure',
             label: 'Mastodon',
