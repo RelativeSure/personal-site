@@ -10,8 +10,8 @@ export default {
   favicon: 'img/favicon.ico',
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'en-GB',
+    locales: ['da-DK', 'en-GB', 'en-US'],
   },
   plugins: [
     [require.resolve("@cmfcmf/docusaurus-search-local"),
@@ -68,6 +68,10 @@ export default {
           src: 'img/logo.svg',
         },
         items: [
+          {
+            type: 'localeDropdown',
+            position: 'left',
+          },
           {
             href: 'https://infosec.exchange/@relativesure',
             label: 'Mastodon',
