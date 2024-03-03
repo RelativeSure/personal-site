@@ -9,8 +9,16 @@ jobs:
   create-tag:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
-    - uses: oven-sh/setup-bun@9b21598af8d4dfc302e5a30250007de0fda92acc # v1
+    - uses: actions/checkout@v4.1.1
+    - uses: oven-sh/setup-bun@v1.1.1
+
+    - uses: actions/cache@v4.0.1
+      id: bun-cache
+      with:
+        path: ~/.bun/install/cache
+        key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+        restore-keys: |
+          ${{ runner.os }}-bun-
 
     - run: bun install
     - run: bun run build
@@ -28,8 +36,6 @@ jobs:
       if: steps.create_tag.outputs.successful
       with:
         head-ref: ${{steps.create_tag.outputs.version}}
-        filter-author: (RelativeSure|KubeArchitectBot|dependabot\[bot\]|Renovate Bot)
-        filter: (^[\s]+?[R|r]elease)|(^[R|r]elease)
         template: |
           ## Bugs
           {{fix}}
@@ -47,7 +53,7 @@ jobs:
       if: steps.create_tag.outputs.successful
       with:
         allowUpdates: true
-        artifacts: docs/*
+        artifacts: "docs/**/*.md,docs/**/*.mdx"
         artifactContentType: markdown
         name: ${{ steps.create_tag.outputs.version }}
         tag: ${{ steps.create_tag.outputs.version }}
