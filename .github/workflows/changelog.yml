@@ -1,0 +1,22 @@
+name: 'Changelog'
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  release:
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Changelog
+        id: github_release
+        uses: mikepenz/release-changelog-builder-action@v4.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          fetchViaCommits: true
+
+      - name: Create Release
+        uses: mikepenz/action-gh-release@v0.4.1
+        with:
+          body: ${{steps.github_release.outputs.changelog}}
