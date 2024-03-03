@@ -11,12 +11,12 @@ jobs:
     steps:
       - name: Build Changelog
         id: github_release
-        uses: mikepenz/release-changelog-builder-action@v4.2.0
+        uses: mikepenz/release-changelog-builder-action@ef7f5f2ba435f80ebb3016e7c77f740f35c1f00e # v4.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           fetchViaCommits: true
 
       - name: Create Release
-        uses: mikepenz/action-gh-release@v0.4.1
+        uses: mikepenz/action-gh-release@ac23f2c4388204c6081863ead928a6f05fd7838a # v0.4.1
         with:
           body: ${{steps.github_release.outputs.changelog}}
