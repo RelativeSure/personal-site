@@ -11,4 +11,4 @@ keywords:
 # image: <insert image here>
 ---
 
-# Linux stuff
+Insert stuff here
