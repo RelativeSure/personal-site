@@ -9,10 +9,10 @@ jobs:
   create-tag:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4.1.1
-    - uses: oven-sh/setup-bun@v1.1.1
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+    - uses: oven-sh/setup-bun@9b21598af8d4dfc302e5a30250007de0fda92acc # v1.1.1
 
-    - uses: actions/cache@v4.0.1
+    - uses: actions/cache@ab5e6d0c87105b4c9c2047343972218f562e4319 # v4.0.1
       id: bun-cache
       with:
         path: ~/.bun/install/cache
@@ -25,14 +25,14 @@ jobs:
 
     - name: Create Tag
       id: create_tag
-      uses: jaywcjlove/create-tag-action@v2.0.0
+      uses: jaywcjlove/create-tag-action@4ab0a9ecf81779bc84c9b1ab8b3177a31828d6d3 # v2.0.0
       with:
         package-path: ./package.json
         release: true
 
     - name: Generate Changelog
       id: changelog
-      uses: jaywcjlove/changelog-generator@v2.0.0
+      uses: jaywcjlove/changelog-generator@a495456e2cfc62aa361eded8ca659d27b5fe6c61 # v2.0.0
       if: steps.create_tag.outputs.successful
       with:
         head-ref: ${{steps.create_tag.outputs.version}}
@@ -49,7 +49,7 @@ jobs:
           {{__unknown__}}
 
     - name: Create Release
-      uses: ncipollo/release-action@v1.14.0
+      uses: ncipollo/release-action@2c591bcc8ecdcd2db72b97d6147f871fcd833ba5 # v1.14.0
       if: steps.create_tag.outputs.successful
       with:
         allowUpdates: true
