@@ -10,26 +10,6 @@ export default {
   favicon: 'img/favicon.ico',
 
   plugins: [
-    [require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        indexDocs: true,
-        indexDocSidebarParentCategories: 2,
-        indexBlog: false,
-        indexPages: false,
-        language: "en",
-        style: undefined,
-        maxSearchResults: 8,
-        lunr: {
-          tokenizerSeparator: /[\s\-]+/,
-          b: 0.75,
-          k1: 1.2,
-          titleBoost: 5,
-          contentBoost: 1,
-          tagsBoost: 3,
-          parentCategoriesBoost: 2,
-        }
-      },
-    ],
     require.resolve("docusaurus-plugin-image-zoom"),
   ],
 
@@ -91,6 +71,14 @@ export default {
             ]
           }
         ],
+      },
+      algolia: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME,
+        contextualSearch: true,
+        searchParameters: {},
+        searchPagePath: 'search',
       },
       prism: {
         theme: prismThemes.github,
