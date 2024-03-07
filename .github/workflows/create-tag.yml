@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-    - uses: oven-sh/setup-bun@9b21598af8d4dfc302e5a30250007de0fda92acc # v1.1.1
+    - uses: oven-sh/setup-bun@d3603274aca5625baad52ec06108517a089cdd00 # v1.2.0
 
     - uses: actions/cache@ab5e6d0c87105b4c9c2047343972218f562e4319 # v4.0.1
       id: bun-cache
