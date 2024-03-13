@@ -17,6 +17,6 @@ jobs:
           fetchViaCommits: true
 
       - name: Create Release
-        uses: mikepenz/action-gh-release@ac23f2c4388204c6081863ead928a6f05fd7838a # v0.4.1
+        uses: mikepenz/action-gh-release@7c0c85cd82a041cfcc74244aec724e96c2bcf77e # v0.5.0
         with:
           body: ${{steps.github_release.outputs.changelog}}
