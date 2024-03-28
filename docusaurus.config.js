@@ -14,7 +14,8 @@ export default {
   ],
 
   themes: [
-    '@saucelabs/theme-github-codeblock'
+    '@saucelabs/theme-github-codeblock',
+    '@docusaurus/theme-search-algolia'
   ],
 
   presets: [
@@ -76,9 +77,9 @@ export default {
         appId: process.env.ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_API_KEY,
         indexName: process.env.ALGOLIA_INDEX_NAME,
-        contextualSearch: true,
-        searchParameters: {},
-        searchPagePath: 'search',
+        // contextualSearch: true,
+        // searchParameters: {},
+        // searchPagePath: 'search',
       },
       prism: {
         theme: prismThemes.github,
