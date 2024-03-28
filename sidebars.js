@@ -1,7 +1,6 @@
 export default {
   docs: [
     'intro',
-    'setup',
     {
       type: 'category',
       label: 'IT Security',
