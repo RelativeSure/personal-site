@@ -8,6 +8,7 @@ export default {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  trailingSlash: false,
 
   plugins: [
     require.resolve("docusaurus-plugin-image-zoom"),
