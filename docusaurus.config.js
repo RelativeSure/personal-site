@@ -14,8 +14,7 @@ export default {
   ],
 
   themes: [
-    '@saucelabs/theme-github-codeblock',
-    '@docusaurus/theme-search-algolia'
+    '@saucelabs/theme-github-codeblock'
   ],
 
   presets: [
