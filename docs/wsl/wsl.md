@@ -1,5 +1,4 @@
 ---
-id: wsl-setup
 title: Personal WSL Setup
 ---
 

@@ -1,5 +1,5 @@
 export default {
-  docs: [
+  sidebarPath: [
     'intro',
     {
       type: 'category',

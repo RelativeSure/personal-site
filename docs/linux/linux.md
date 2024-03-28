@@ -1,5 +1,4 @@
 ---
-id: linux-basic
 title: Linux Basic
 description: Basic commands in linux
 keywords:

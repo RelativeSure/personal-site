@@ -1,5 +1,4 @@
 ---
-id: it-security
 title: IT-Security
 description: Frequently Asked Questions about IT-Security
 keywords:

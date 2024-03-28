@@ -1,5 +1,4 @@
 ---
-id: wsl-advanced
 title: WSL Subnet
 ---
 
