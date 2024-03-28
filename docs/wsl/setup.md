@@ -6,7 +6,8 @@ title: Personal WSL Setup
 ## Windows Terminal
 
 Gist to personal VSCode settings file
-<https://gist.github.com/RelativeSure/60b590d1795521ef9d213c83afd16066>
+
+- [Personal VSCode Settings](https://gist.github.com/RelativeSure/60b590d1795521ef9d213c83afd16066)
 
 GitHub repo to personal dotfiles
 

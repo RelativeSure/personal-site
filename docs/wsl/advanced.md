@@ -2,6 +2,7 @@
 id: wsl-advanced
 title: WSL Subnet
 ---
+
 ## WSL Subnet
 
 To setup a new network in your NAT'ed interface in WSL you have to edit in the registry.
