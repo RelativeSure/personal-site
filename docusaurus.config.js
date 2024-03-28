@@ -3,7 +3,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 export default {
   title: "Rasmus Personal Site",
   tagline: 'Intro, personal and more',
-  url: 'https://www.rasmusj.dk',
+  url: 'https://rasmusj.dk',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -76,9 +76,9 @@ export default {
         appId: process.env.ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_API_KEY,
         indexName: process.env.ALGOLIA_INDEX_NAME,
-        contextualSearch: true,
-        searchParameters: {},
-        searchPagePath: 'search',
+        // contextualSearch: true,
+        // searchParameters: {},
+        // searchPagePath: 'search',
       },
       prism: {
         theme: prismThemes.github,
