@@ -1,5 +1,4 @@
 ---
-id: kubernetes
 title: Kubernetes
 description: Frequently Asked Questions about Kubernetes
 keywords:
@@ -14,4 +13,3 @@ keywords:
 ## AKS
 
 ## On-Prem
-

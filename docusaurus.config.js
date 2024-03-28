@@ -28,17 +28,11 @@ export default {
           showLastUpdateTime: true,
           showLastUpdateAuthor: true,
           editUrl: ({versionDocsDirPath, docPath}) =>
-            `https://github.com/relativesure/personal-site/edit/master/docs/${versionDocsDirPath}/${docPath}`,
+            `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
         },
         blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
-        },
-        sitemap: {
-          changefreq: 'weekly',
-          priority: 0.5,
-          ignorePatterns: ['/tags/**'],
-          filename: 'sitemap.xml',
         },
       }),
     ],
@@ -50,10 +44,6 @@ export default {
       navbar: {
         title: 'Rasmus Brøgger Jørgensen',
         hideOnScroll: true,
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
         items: [
           {
             type: 'dropdown',
@@ -73,12 +63,9 @@ export default {
         ],
       },
       algolia: {
-        appId: process.env.ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_API_KEY,
-        indexName: process.env.ALGOLIA_INDEX_NAME,
-        // contextualSearch: true,
-        // searchParameters: {},
-        // searchPagePath: 'search',
+        appId: "08LOM48KL6",
+        apiKey: "9040120b066483377aca58da7b7aaba3",
+        indexName: "rasmusjv2",
       },
       prism: {
         theme: prismThemes.github,
@@ -99,10 +86,6 @@ export default {
         defaultMode: 'dark',
         disableSwitch: false,
         respectPrefersColorScheme: true,
-      },
-      tableOfContents: {
-        minHeadingLevel: 2,
-        maxHeadingLevel: 5,
       },
       footer: {
         copyright: `Copyright © ${new Date().getFullYear()} Personal site. Built with Docusaurus.`,
