@@ -3,7 +3,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 export default {
   title: "Rasmus Personal Site",
   tagline: 'Intro, personal and more',
-  url: 'https://www.rasmusj.dk',
+  url: 'https://rasmusj.dk',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
