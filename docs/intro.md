@@ -23,6 +23,7 @@ I have experience in working with:
   - Debian
     - Ubuntu
   - Kali
+  - NixOS ( basic knowledge )
 - Databases
   - Oracle DB
   - Redis
@@ -56,4 +57,3 @@ I have experience in working with:
 - [GitHub KubeArchitect Organization](https://github.com/KubeArchitect)
 - [Ansible WSL2 Setup](https://github.com/RelativeSure/ansible-wsl2-playbook)
 - [Renovate Runner](https://github.com/KubeArchitect/renovate-runner)
-- [WSL Configuration dotfiles](https://github.com/RelativeSure/wsl-configuration)

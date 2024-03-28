@@ -9,12 +9,9 @@ keywords:
 # image: <insert image here>
 ---
 
-Insert stuff here
-
-## Rancher
+## Kubectl
 
 ## AKS
 
 ## On-Prem
 
-## k3s
