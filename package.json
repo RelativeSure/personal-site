@@ -18,6 +18,7 @@
     "@docusaurus/preset-classic": "3.1.1",
     "@mdx-js/react": "3.0.1",
     "@saucelabs/theme-github-codeblock": "0.2.3",
+    "@easyops-cn/docusaurus-search-local": "0.40.1",
     "clsx": "2.1.0",
     "docusaurus": "1.14.7",
     "docusaurus-plugin-image-zoom": "2.0.0",
