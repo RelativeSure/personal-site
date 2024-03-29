@@ -10,6 +10,11 @@ export default {
   favicon: 'img/favicon.ico',
   trailingSlash: false,
 
+  // Required for GitHub Pages
+  organizationName: "RelativeSure",
+  projectName: "personal-site",
+  deploymentBranch: "master",
+
   plugins: [
     require.resolve("docusaurus-plugin-image-zoom"),
   ],
