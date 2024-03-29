@@ -66,7 +66,7 @@ export default {
       algolia: {
         appId: "08LOM48KL6",
         apiKey: "9040120b066483377aca58da7b7aaba3",
-        indexName: "rasmusjv2",
+        indexName: "rasmusj",
       },
       prism: {
         theme: prismThemes.github,
