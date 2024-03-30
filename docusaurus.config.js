@@ -17,20 +17,16 @@ export default {
 
   plugins: [
     require.resolve("docusaurus-plugin-image-zoom"),
-
-'@docusaurus/plugin-content-docs',
-      {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
-          editUrl: ({versionDocsDirPath, docPath}) =>
-            `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
+    [reqiure.resolve("@docusaurus/plugin-content-docs"),
+    {
+      routeBasePath: '/',
+      sidebarPath: require.resolve('./sidebars.js'),
+      showLastUpdateTime: true,
+      showLastUpdateAuthor: true,
+      editUrl: ({versionDocsDirPath, docPath}) =>
+        `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
       },
+    }],
   ],
 
   themes: [
@@ -52,6 +48,27 @@ export default {
       }),
     ],
   ],
+
+  // presets: [
+  //   [
+  //     'classic',
+  //     /** @type {import('@docusaurus/preset-classic').Options} */
+  //     ({
+  //       docs: {
+  //         routeBasePath: '/',
+  //         sidebarPath: require.resolve('./sidebars.js'),
+  //         showLastUpdateTime: true,
+  //         showLastUpdateAuthor: true,
+  //         editUrl: ({versionDocsDirPath, docPath}) =>
+  //           `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
+  //       },
+  //       blog: false,
+  //       theme: {
+  //         customCss: require.resolve('./src/css/custom.css'),
+  //       },
+  //     }),
+  //   ],
+  // ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
