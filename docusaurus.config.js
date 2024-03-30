@@ -23,9 +23,9 @@ export default {
       sidebarPath: require.resolve('./sidebars.js'),
       showLastUpdateTime: true,
       showLastUpdateAuthor: true,
-      editUrl: ({versionDocsDirPath, docPath}) =>
-        `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
-      },
+      // editUrl: ({versionDocsDirPath, docPath}) =>
+      //   `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
+      // },
     }],
   ],
 
