@@ -30,7 +30,7 @@ export default {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
   ],
 
   themes: [
