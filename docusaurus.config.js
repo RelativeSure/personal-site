@@ -17,6 +17,20 @@ export default {
 
   plugins: [
     require.resolve("docusaurus-plugin-image-zoom"),
+
+'@docusaurus/plugin-content-docs',
+      {
+          routeBasePath: '/',
+          sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
+          editUrl: ({versionDocsDirPath, docPath}) =>
+            `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      }),
   ],
 
   themes: [
@@ -35,27 +49,6 @@ export default {
         // ```
         // language: ["en", "zh"],
         // ```
-      }),
-    ],
-  ],
-
-  presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
-          editUrl: ({versionDocsDirPath, docPath}) =>
-            `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
-        },
-        blog: false,
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
       }),
     ],
   ],
