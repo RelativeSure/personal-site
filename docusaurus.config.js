@@ -17,7 +17,7 @@ export default {
 
   plugins: [
     require.resolve("docusaurus-plugin-image-zoom"),
-    [reqiure.resolve("@docusaurus/plugin-content-docs"),
+    [require.resolve("@docusaurus/plugin-content-docs"),
     {
       routeBasePath: '/',
       sidebarPath: require.resolve('./sidebars.js'),
