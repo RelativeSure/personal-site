@@ -20,7 +20,6 @@ export default {
 
 '@docusaurus/plugin-content-docs',
       {
-docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateTime: true,
@@ -28,13 +27,10 @@ docs: {
           editUrl: ({versionDocsDirPath, docPath}) =>
             `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
         },
-        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
-      }, 
-  
   ],
 
   themes: [
