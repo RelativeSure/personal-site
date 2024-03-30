@@ -17,16 +17,25 @@ export default {
 
   plugins: [
     require.resolve("docusaurus-plugin-image-zoom"),
-    [require.resolve("@docusaurus/plugin-content-docs"),
-    {
-      routeBasePath: '/',
-      sidebarPath: require.resolve('./sidebars.js'),
-      showLastUpdateTime: true,
-      showLastUpdateAuthor: true,
-      // editUrl: ({versionDocsDirPath, docPath}) =>
-      //   `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
-      // },
-    }],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        path: 'docs',
+        routeBasePath: '/',
+        // sidebarPath: './sidebars.js',
+        sidebarPath: require.resolve('./sidebars.js'),
+        showLastUpdateTime: true,
+        showLastUpdateAuthor: true,
+        editUrl: ({versionDocsDirPath, docPath}) =>
+          `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
+      }
+    ],
+    [
+      '@docusaurus/theme-classic',
+      {
+        customCss: './src/css/custom.css',
+      },
+    ],
   ],
 
   themes: [
@@ -35,97 +44,67 @@ export default {
       require.resolve("@easyops-cn/docusaurus-search-local"),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
         indexBlog: false,
         docsRouteBasePath: "/",
-
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
-        // language: ["en", "zh"],
-        // ```
       }),
     ],
   ],
 
-  // presets: [
-  //   [
-  //     'classic',
-  //     /** @type {import('@docusaurus/preset-classic').Options} */
-  //     ({
-  //       docs: {
-  //         routeBasePath: '/',
-  //         sidebarPath: require.resolve('./sidebars.js'),
-  //         showLastUpdateTime: true,
-  //         showLastUpdateAuthor: true,
-  //         editUrl: ({versionDocsDirPath, docPath}) =>
-  //           `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
-  //       },
-  //       blog: false,
-  //       theme: {
-  //         customCss: require.resolve('./src/css/custom.css'),
-  //       },
-  //     }),
-  //   ],
-  // ],
-
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: 'Rasmus Brøgger Jørgensen',
-        hideOnScroll: true,
-        items: [
-          {
-            type: 'dropdown',
-            label: 'Socials',
-            position: 'left',
-            items: [
-              {
-                href: 'https://infosec.exchange/@relativesure',
-                label: 'Mastodon',
-              },
-              {
-                href: 'https://github.com/RelativeSure',
-                label: 'GitHub',
-              },
-            ]
-          }
-        ],
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-        additionalLanguages: [
-          'bash',
-          'diff',
-          'json',
-          'markdown',
-          'powershell',
-          'yaml',
-          'git',
-          'nginx',
-          'docker',
-        ],
-      },
-      colorMode: {
-        defaultMode: 'dark',
-        disableSwitch: false,
-        respectPrefersColorScheme: true,
-      },
-      footer: {
-        copyright: `Copyright © ${new Date().getFullYear()} Personal site. Built with Docusaurus.`,
-      },
-      zoom: {
-        selector: '.markdown :not(em) > img',
-        config: {
-          // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
-          background: {
-            light: 'rgb(255, 255, 255)',
-            dark: 'rgb(50, 50, 50)'
-          }
+  themeConfig: {
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+    navbar: {
+      title: 'Rasmus Brøgger Jørgensen',
+      hideOnScroll: true,
+      items: [
+        {
+          type: 'dropdown',
+          label: 'Socials',
+          position: 'left',
+          items: [
+            {
+              href: 'https://infosec.exchange/@relativesure',
+              label: 'Mastodon',
+            },
+            {
+              href: 'https://github.com/RelativeSure',
+              label: 'GitHub',
+            },
+          ]
+        }
+      ],
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+      additionalLanguages: [
+        'bash',
+        'diff',
+        'json',
+        'markdown',
+        'powershell',
+        'yaml',
+        'git',
+        'nginx',
+        'docker',
+      ],
+    },
+    footer: {
+      copyright: `@${new Date().getFullYear()} Personal site. Built with Docusaurus.`,
+    },
+    zoom: {
+      selector: '.markdown :not(em) > img',
+      config: {
+        // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)'
         }
       }
-    }),
+    }
+  },
 };
