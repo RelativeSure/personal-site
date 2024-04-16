@@ -41,7 +41,7 @@ I have experience in working with:
 
 ### Links
 
-- [LinkedIn](https://www.linkedin.com/in/rj%C3%B8rgensen/)
+- [LinkedIn](https://www.linkedin.com/in/rasmusbroeggerjoergensen)
 
 ### Technical
 
