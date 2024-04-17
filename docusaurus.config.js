@@ -3,17 +3,12 @@ import {themes as prismThemes} from 'prism-react-renderer';
 export default {
   title: "Rasmus Personal Site",
   tagline: 'Intro, personal and more',
-  url: 'https://rasmusj.dk',
+  url: 'https://old.rasmusj.dk',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   trailingSlash: false,
-
-  // Required for GitHub Pages
-  organizationName: "RelativeSure",
-  projectName: "personal-site",
-  deploymentBranch: "master",
 
   plugins: [
     require.resolve("docusaurus-plugin-image-zoom"),
