@@ -8,14 +8,25 @@ pull_request_rules:
         toggle:
           - merge-queued
 
-  - name: Automatic merge
-    description: Merge when PR passes all branch protection
+  - name: Automatic Approve
+    description: Automatic Approve if author is either dependabot[bot] or KubeArchitectBot
     conditions:
       - or:
           - author = dependabot[bot]
           - author = KubeArchitectBot
     actions:
-      merge:
+      review:
+        type: APPROVE
+
+  - name: Automatic merge
+    description: Merge when PR passes all branch protection
+    conditions:
+      - base=master
+      - or:
+        - author = dependabot[bot]
+        - author = KubeArchitectBot
+    actions:
+      queue:
 
   - name: Label conflicting pull requests
     description: Add a label to a pull request with conflict to spot it easily
