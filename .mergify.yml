@@ -27,7 +27,6 @@ pull_request_rules:
         - author = KubeArchitectBot
     actions:
       queue:
-        method: merge
 
   - name: Label conflicting pull requests
     description: Add a label to a pull request with conflict to spot it easily
