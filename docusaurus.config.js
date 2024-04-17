@@ -1,7 +1,7 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer'
 
 export default {
-  title: "Rasmus Personal Site",
+  title: 'Rasmus Personal Site',
   tagline: 'Intro, personal and more',
   url: 'https://old.rasmusj.dk',
   baseUrl: '/',
@@ -11,7 +11,7 @@ export default {
   trailingSlash: false,
 
   plugins: [
-    require.resolve("docusaurus-plugin-image-zoom"),
+    require.resolve('docusaurus-plugin-image-zoom'),
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -21,36 +21,36 @@ export default {
         sidebarPath: require.resolve('./sidebars.js'),
         showLastUpdateTime: true,
         showLastUpdateAuthor: true,
-        editUrl: ({versionDocsDirPath, docPath}) =>
-          `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`,
+        editUrl: ({ versionDocsDirPath, docPath }) =>
+          `https://github.com/relativesure/personal-site/edit/master/${versionDocsDirPath}/${docPath}`
       }
     ],
     [
       '@docusaurus/theme-classic',
       {
-        customCss: './src/css/custom.css',
-      },
-    ],
+        customCss: './src/css/custom.css'
+      }
+    ]
   ],
 
   themes: [
     '@saucelabs/theme-github-codeblock',
     [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
+      require.resolve('@easyops-cn/docusaurus-search-local'),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
         hashed: true,
         indexBlog: false,
-        docsRouteBasePath: "/",
-      }),
-    ],
+        docsRouteBasePath: '/'
+      })
+    ]
   ],
 
   themeConfig: {
     colorMode: {
       defaultMode: 'light',
       disableSwitch: false,
-      respectPrefersColorScheme: true,
+      respectPrefersColorScheme: true
     },
     navbar: {
       title: 'Rasmus Brøgger Jørgensen',
@@ -63,15 +63,15 @@ export default {
           items: [
             {
               href: 'https://infosec.exchange/@relativesure',
-              label: 'Mastodon',
+              label: 'Mastodon'
             },
             {
               href: 'https://github.com/RelativeSure',
-              label: 'GitHub',
-            },
+              label: 'GitHub'
+            }
           ]
         }
-      ],
+      ]
     },
     prism: {
       theme: prismThemes.github,
@@ -85,11 +85,11 @@ export default {
         'yaml',
         'git',
         'nginx',
-        'docker',
-      ],
+        'docker'
+      ]
     },
     footer: {
-      copyright: `@${new Date().getFullYear()} Personal site. Built with Docusaurus.`,
+      copyright: `@${new Date().getFullYear()} Personal site. Built with Docusaurus.`
     },
     zoom: {
       selector: '.markdown :not(em) > img',
@@ -101,5 +101,5 @@ export default {
         }
       }
     }
-  },
-};
+  }
+}

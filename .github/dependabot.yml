@@ -5,7 +5,6 @@
 
 version: 2
 updates:
-
   - package-ecosystem: "npm"
     directory: "/"
     rebase-strategy: "disabled"
@@ -13,7 +12,7 @@ updates:
       interval: "daily"
     groups:
       all-npm:
-        patterns: [ "*" ]
+        patterns: ["*"]
     labels:
       - "npm"
     reviewers:
@@ -26,9 +25,9 @@ updates:
       interval: "weekly"
     groups:
       all-actions:
-        patterns: [ "*" ]
+        patterns: ["*"]
     labels:
-      -  "github-actions"
+      - "github-actions"
     reviewers:
       - "RelativeSure"
 
@@ -39,8 +38,8 @@ updates:
       interval: "weekly"
     groups:
       all-devcontainers:
-        patterns: [ "*" ]
+        patterns: ["*"]
     labels:
-      -  "devcontainers"
+      - "devcontainers"
     reviewers:
       - "RelativeSure"
